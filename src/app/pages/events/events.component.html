@@ -1,0 +1,26 @@
+<section class="container" *ngIf="eventData$ | async as EventData">
+    <p-card header="{{EventData.eventName}}" class="card-body">
+      
+        
+       <div class="card-body">
+          
+            <img
+            [src]="EventData.imageUrl" 
+            alt="Image" 
+            width="50%" />
+
+            <div class="card flex justify-content-center"[style]="{ padding: '10px' }">
+                <p-rating [(ngModel)]="value" [cancel]="false" />
+            </div>
+            <p-button label="Book Now" severity="warning" />
+           
+           
+            <h3> <i class="pi pi-calendar" style="font-size: 1rem; padding-right:5px; padding-right:2px;"></i>Start Date: <span class="text">{{EventData.startDate | date}}</span> </h3>
+            <h3> <i class="pi pi-calendar" style="font-size: 1rem; padding-right:5px;"></i>End Date:<span class="text">{{EventData.endDate| date}}</span></h3>
+            <h3> <i class="pi pi-clock" style="font-size: 1rem; padding-right:5px;"></i>Start Time:<span class="text">{{EventData.startTime}}</span></h3>
+            <h3> <i class="pi pi-map-marker" style="font-size: 1rem; padding-right:5px;"></i>Location:<span class="text">{{EventData.location}}</span></h3>
+           
+       </div>
+       
+    </p-card>
+</section>

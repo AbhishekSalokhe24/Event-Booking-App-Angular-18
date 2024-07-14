@@ -1,0 +1,19 @@
+<div class="container">
+
+    @for (item of eventList; track $index) {
+        <div class="card flex justify-content-center">
+            
+            <p-card header="{{item.eventName}}" subheader="{{item.location}}" [style]="{ width: '360px' }">
+                <ng-template pTemplate="header">
+                    <img alt="Card" [src]="item.imageUrl" (error)="onImageError($event)" class="event-image" />
+                </ng-template>
+                <div class="flex button-container">
+                    <p-button label="Book" class="w-full custom-button" [routerLink]="['/events/',item.eventId]" />
+                </div>
+            </p-card>
+            
+        </div>
+    }
+
+</div>
+

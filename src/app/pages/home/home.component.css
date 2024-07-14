@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 1rem;
+}
+.button-container .custom-button {
+    margin: 5px; /* Adjust the margin as needed */
+}
+img{
+   
+    width: 100%;
+}
+/* Custom styles for the card container */
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for the event image */
+.event-image {
+    width: 100%; /* Full width */
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+/* Styles for the button container */
+.button-container .custom-button {
+    margin: 5px; /* Adjust the margin as needed */
+}
+
